@@ -115,9 +115,9 @@ fi
 source "$BIN_DIR/steps/pip"
 
 # Install required gems if there's a Gemfile.
-#if [ -f Gemfile.lock ] && [ ! "$SKIP_BUNDLER" ]; then
-#    source "$BIN_DIR/steps/bundler"
-#fi
+if [ -f Gemfile.lock ] && [ ! "$SKIP_BUNDLER" ]; then
+    source "$BIN_DIR/steps/bundler"
+fi
 
 # Install required node packages if there's a package.json.
 if [ -f package.json ] && [ ! "$SKIP_NPM" ]; then
