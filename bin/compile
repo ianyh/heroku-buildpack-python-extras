@@ -125,9 +125,7 @@ if [ -f package.json ] && [ ! "$SKIP_NPM" ]; then
 fi
 
 # Run collectstatic if this is a Django app.
-if [ -f manage.py ] && [ ! "$SKIP_COLLECTSTATIC" ]; then
-    source "$BIN_DIR/steps/collectstatic"
-fi
+source "$BIN_DIR/steps/collectstatic"
 
 # ### Finalize
 #
